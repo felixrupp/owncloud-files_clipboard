@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<info>
+    <id>files_clipboard</id>
+    <name>Files clipboard</name>
+    <description>Clipboard operations for the files interface.</description>
+    <version>0.1</version>
+    <licence>AGPL</licence>
+    <author>Leizh</author>
+    <require>6</require>
+</info>

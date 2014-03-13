@@ -1,0 +1,33 @@
+tr.cut td.filename:before {
+	position: absolute;
+	display: block;
+	width: 50px;
+	height: 50px;
+	background-color: white;
+	opacity: 0.6;
+	content: "";
+}
+
+tr:hover td.filename:before, tr.selected td.filename:before {
+	background-color: inherit;
+}
+
+#clipboard_paste {
+	float: right;
+	margin-right: 8px;
+	transition: background-color 250ms ease 0;
+	-moz-transition: background-color 250ms ease 0;
+	-ms-transition: background-color 250ms ease 0;
+	-o-transition: background-color 250ms ease 0;
+	-webkit-transition: background-color 250ms ease 0;
+}
+
+#clipboard_paste.blink {
+	background-color: white;
+}
+
+
+#clipboard_paste.disabled > img {
+	opacity: 0.3;
+	cursor:default;
+}
