@@ -7,7 +7,7 @@ var appid = 'files_clipboard',
 
 var $cut = $('<a/>')
 	.attr('id', 'clipboard_cut')
-	.append($('<img/>').addClass('svg').attr('src', OC.imagePath(appid,'copy')))
+	.append($('<img/>').addClass('svg').attr('src', OC.imagePath(appid,'cut')))
 	.append(' ' + t(appid,'Cut'))
 	.on('click', cut)
 	.hide()
@@ -15,7 +15,7 @@ var $cut = $('<a/>')
 	
 var $copy = $('<a/>')
 	.attr('id', 'clipboard_copy')
-	.append($('<img/>').addClass('svg').attr('src', OC.imagePath(appid,'cut')))
+	.append($('<img/>').addClass('svg').attr('src', OC.imagePath(appid,'copy')))
 	.append(' ' + t(appid,'Copy'))
 	.on('click', copy)
 	.hide()
