@@ -54,7 +54,7 @@ function update(blink) {
 
 	$cut.toggle((permissions & OC.PERMISSION_READ && permissions & OC.PERMISSION_DELETE) != 0);
 	$copy.toggle((permissions & OC.PERMISSION_READ) != 0);
-	// TODO translation avec variable
+
 	if (clipboard) {
 		var sameDirectory = clipboard.directory == $dir.val(),
 			noPermissions = !(permissions & OC.PERMISSION_CREATE),
@@ -91,7 +91,7 @@ function clearCut() {
 }
 
 function cut () {
-	var files = getSelectedFilesTrash('name');
+	var files = FileList.getSelectedFiles().map(function(file) { return file.name; });
 	clipboard = { operation: 'cut', directory: $dir.val(), files: files };
 	sessionStorage.setItem(appid, JSON.stringify(clipboard));
 	clearCut();
@@ -100,7 +100,7 @@ function cut () {
 }
 
 function copy () {
-	var files = getSelectedFilesTrash('name');
+	var files = FileList.getSelectedFiles().map(function(file) { return file.name; });
 	clipboard = { operation: 'copy', directory: $dir.val(), files: files };
 	sessionStorage.setItem(appid, JSON.stringify(clipboard));
 	clearCut();
@@ -111,7 +111,6 @@ function copy () {
 function clearSelection() {
 	$('tr[data-file]', $fileList).removeClass('selected');
 	$('tr[data-file] input[type="checkbox"]', $fileList).removeAttr('checked');
-	procesSelection();
 }
 
 function paste() {

@@ -9,11 +9,11 @@ if(count(array_intersect_key(array_flip($required), $_POST)) !== count($required
 }
 
 function copyr($src, $dest){
-	if (!OC_Filesystem::is_dir($src)) return OC_Filesystem::copy($src, $dest);
+	if (!\OC\Files\Filesystem::is_dir($src)) return \OC\Files\Filesystem::copy($src, $dest);
 	else {
-		if ($dh = OC_Filesystem::opendir($src)) {
+		if ($dh = \OC\Files\Filesystem::opendir($src)) {
 			if (!dh) return false;
-			if (!OC_Filesystem::mkdir($dest)) return false;
+			if (!\OC\Files\Filesystem::mkdir($dest)) return false;
 			while (($file = readdir($dh)) !== false) {
 				if ($file == "." || $file == "..") continue;
 				if (!copyr($src.'/'.$file, $dest.'/'.$file)) return false;
@@ -24,16 +24,16 @@ function copyr($src, $dest){
 }
 
 function unlinkr($dir){
-	if (!OC_Filesystem::is_dir($dir)) OC_Filesystem::unlink($dir);
+	if (!\OC\Files\Filesystem::is_dir($dir)) \OC\Files\Filesystem::unlink($dir);
 	else {
-		$dh = OC_Filesystem::opendir($dir);
+		$dh = \OC\Files\Filesystem::opendir($dir);
 		while (($file = readdir($dh)) !== false) {
 			if ($file == "." || $file == "..") continue;
 			unlinkr($dir.'/'.$file);
 		}
-		OC_Filesystem::rmdir($dir);
+		\OC\Files\Filesystem::rmdir($dir);
 	}
-	return !OC_Filesystem::file_exists($dir);
+	return !\OC\Files\Filesystem::file_exists($dir);
 }
 
 $messages = [];
@@ -43,7 +43,7 @@ foreach($_POST['files'] as $file) {
 	$source = $_POST['directory'] . '/' . $file;
 	$target = $_POST['destination'] . '/' . $file;
 
-	if (OC_Filesystem::file_exists($target)) {
+	if (\OC\Files\Filesystem::file_exists($target)) {
 		if (!unlinkr($target)) {
 			$messages[] = $l->t("Could not remove '%s'", array($file));
 			continue;
@@ -51,7 +51,7 @@ foreach($_POST['files'] as $file) {
 	}
 
 	if ($cut) {
-		if (!OC_Filesystem::rename($source, $target)) {
+		if (!\OC\Files\Filesystem::rename($source, $target)) {
 			$messages[] = $l->t("Could not move '%s'", array($file));
 		}
 	} else {
