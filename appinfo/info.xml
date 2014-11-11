@@ -3,8 +3,8 @@
     <id>files_clipboard</id>
     <name>Files clipboard</name>
     <description>Clipboard operations for the files interface.</description>
-    <version>0.1</version>
+    <version>0.2</version>
     <licence>AGPL</licence>
     <author>Leizh</author>
-    <require>6</require>
+    <require>7</require>
 </info>
