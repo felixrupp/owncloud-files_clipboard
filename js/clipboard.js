@@ -128,7 +128,7 @@ function paste() {
 				if (data.status == 'error') {
 					var message;
 					if (clipboard.operation == 'cut') message = t(appid, "An error occurred during the move.");
-					else message = t(appid, "Une erreur s'est produite during the copy.");
+					else message = t(appid, "An error occurred during the copy.");
 					OC.Notification.hide();
 					OC.Notification.show(message);
 				} else {
