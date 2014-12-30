@@ -111,6 +111,9 @@ function copy () {
 function clearSelection() {
 	$('tr[data-file]', $fileList).removeClass('selected');
 	$('tr[data-file] input[type="checkbox"]', $fileList).removeAttr('checked');
+	FileList._selectedFiles = {};
+	FileList._selectionSummary.clear();
+	FileList.updateSelectionSummary();
 }
 
 function paste() {
