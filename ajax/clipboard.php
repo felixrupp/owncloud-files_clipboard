@@ -9,10 +9,10 @@ if(count(array_intersect_key(array_flip($required), $_POST)) !== count($required
 }
 
 function copyr($src, $dest){
-	if (!\OC\Files\Filesystem::is_dir($src)) return \OC\Files\Filesystem::copy($src, $dest);
-	else {
-		if ($dh = \OC\Files\Filesystem::opendir($src)) {
-			if (!dh) return false;
+	if (!\OC\Files\Filesystem::is_dir($src)) {
+		return \OC\Files\Filesystem::copy($src, $dest);
+	} else {
+		if (($dh = \OC\Files\Filesystem::opendir($src)) !== false) {
 			if (!\OC\Files\Filesystem::mkdir($dest)) return false;
 			while (($file = readdir($dh)) !== false) {
 				if ($file == "." || $file == "..") continue;
