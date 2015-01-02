@@ -36,7 +36,7 @@ function unlinkr($dir){
 	return !\OC\Files\Filesystem::file_exists($dir);
 }
 
-$messages = [];
+$messages = array();
 $cut = $_POST['operation'] == 'cut';
 $l = OC_L10N::get('files_clipboard');
 foreach($_POST['files'] as $file) {
