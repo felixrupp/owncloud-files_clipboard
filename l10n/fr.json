@@ -1,5 +1,5 @@
 { "translations": {
-	"Could not remove '%s'" : "Impossible de supprimer '%s'.",
+    "Could not remove '%s'" : "Impossible de supprimer '%s'.",
     "Could not move '%s'" : "Impossible de déplacer '%s'.",
     "Could not copy '%s'" : "Impossible de copier '%s'.",
     "Cut" : "Couper",

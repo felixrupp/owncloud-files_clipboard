@@ -1,6 +1,6 @@
 OC.L10N.register(
-	"files_clipboard",
-	{
+    "files_clipboard",
+    {
     "Could not remove '%s'" : "Impossible de supprimer '%s'.",
     "Could not move '%s'" : "Impossible de déplacer '%s'.",
     "Could not copy '%s'" : "Impossible de copier '%s'.",
