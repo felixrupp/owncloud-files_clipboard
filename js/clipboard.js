@@ -1,5 +1,5 @@
 $(document).ready(function() {
-if (!FileList) return;
+if (!OCA.Files) return;
 
 var appid = 'files_clipboard',
 	$dir = $('#dir'),
