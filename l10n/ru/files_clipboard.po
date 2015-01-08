@@ -41,15 +41,15 @@ msgstr "Вставить"
 
 #: js/clipboard.js:63
 msgid "Unable to paste: the files come from this directory."
-msgstr "Вставка не возможна: элементы взяты из этой директории."
+msgstr "Вставка не возможна: элементы взяты из этого каталога."
 
 #: js/clipboard.js:64
 msgid ""
 "Unable to paste: you do not have the permissions to create files in this "
 "directory."
 msgstr ""
-"Вставка не возможна: у Вас недостаточно прав для создания элементов в этой "
-"директории."
+"Вставка не возможна: у Вас недостаточно прав для создания элементов в этом "
+"каталоге."
 
 #: js/clipboard.js:65
 msgid "Paste %n item"
@@ -83,5 +83,5 @@ msgid ""
 "The contents of the clipboard is in conflicts with elements already present "
 "in this directory. Do you want to replace them ?"
 msgstr ""
-"Содержимое буфера обмена конфликтует с элементами находящимися в папке. "
-"Заменить конфликтующие элементы папки ?"
+"Содержимое буфера обмена конфликтует с элементами находящимися в каталоге. "
+"Заменить конфликтующие элементы каталога ?"
