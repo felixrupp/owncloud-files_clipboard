@@ -26,3 +26,9 @@ tr:hover td.filename:before, tr.selected td.filename:before {
 	opacity: 0.3;
 	cursor:default;
 }
+
+#notification .files_clipboard_error {
+	text-align:left;
+	margin-bottom: 0.4em; 
+	padding: 0.2em;
+}
