@@ -2,6 +2,8 @@
 OCP\JSON::checkLoggedIn();
 OCP\JSON::callCheck();
 
+$l = \OC::$server->getL10N('files_clipboard');
+
 $required = array('operation', 'directory', 'files', 'destination');
 if(count(array_intersect_key(array_flip($required), $_POST)) !== count($required)) {
 	OCP\JSON::error();
