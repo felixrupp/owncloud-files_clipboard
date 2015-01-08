@@ -43,6 +43,11 @@ foreach($_POST['files'] as $file) {
 	$source = \OC\Files\Filesystem::normalizePath(stripslashes($_POST['directory']) . '/' . $file);
 	$target = \OC\Files\Filesystem::normalizePath(stripslashes($_POST['destination']) . '/' . $file);
 
+	if (!\OC\Files\Filesystem::file_exists($source)) {
+		$messages[] = $l->t("Unable to paste '%s' item does not exists", array($file));
+		continue;
+	}
+
 	if (strpos($target, $source) === 0) {
 		if ($cut) {
 			$messages[] = $l->t("Unable to move folder '%s' into itself", array($file));
