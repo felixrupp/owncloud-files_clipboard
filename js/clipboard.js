@@ -130,10 +130,20 @@ function paste() {
 			success: function (data) {
 				if (data.status == 'error') {
 					var message;
-					if (clipboard.operation == 'cut') message = t(appid, "An error occurred during the move.");
-					else message = t(appid, "An error occurred during the copy.");
+					if (data.messages.length === 1) {
+						message = data.messages[0];
+					} else {
+						if (clipboard.operation == 'cut') {
+							message = '<b>' + n(appid, "%n error occurred during the move:", "%n errors occurred during the move:", data.messages.length) + '</b>';
+						} else {
+							message = '<b>' + n(appid, "%n error occurred during the copy:", "%n errors occurred during the copy:", data.messages.length) + '</b>';
+						}
+						message += '<p class="files_clipboard_error">';
+						for (var i = data.messages.length - 1; i >= 0; --i) message += data.messages[i] + '<br>';
+						message += '</p>';
+					}
 					OC.Notification.hide();
-					OC.Notification.show(message);
+					OC.Notification.showHtml(message);
 				} else {
 					if (clipboard.operation == 'cut') {
 						sessionStorage.removeItem(appid);
