@@ -42,8 +42,22 @@ $messages = array();
 $cut = $_POST['operation'] == 'cut';
 $l = OC_L10N::get('files_clipboard');
 foreach($_POST['files'] as $file) {
-	$source = $_POST['directory'] . '/' . $file;
-	$target = $_POST['destination'] . '/' . $file;
+	$source = \OC\Files\Filesystem::normalizePath(stripslashes($_POST['directory']) . '/' . $file);
+	$target = \OC\Files\Filesystem::normalizePath(stripslashes($_POST['destination']) . '/' . $file);
+
+	if (!\OC\Files\Filesystem::file_exists($source)) {
+		$messages[] = $l->t("Unable to paste '%s' item does not exists", array($file));
+		continue;
+	}
+
+	if (strpos($target, $source) === 0) {
+		if ($cut) {
+			$messages[] = $l->t("Unable to move folder '%s' into itself", array($file));
+		} else {
+			$messages[] = $l->t("Unable to copy folder '%s' into itself", array($file));
+		}
+		continue;
+	}
 
 	if (\OC\Files\Filesystem::file_exists($target)) {
 		if (!unlinkr($target)) {
