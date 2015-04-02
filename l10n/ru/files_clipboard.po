@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ajax/clipboard.php:48
 #, php-format
@@ -41,21 +41,22 @@ msgstr "Вставить"
 
 #: js/clipboard.js:63
 msgid "Unable to paste: the files come from this directory."
-msgstr "Вставка не возможна: элементы взяты из этой директории."
+msgstr "Вставка не возможна: элементы взяты из этого каталога."
 
 #: js/clipboard.js:64
 msgid ""
 "Unable to paste: you do not have the permissions to create files in this "
 "directory."
 msgstr ""
-"Вставка не возможна: у Вас недостаточно прав для создания элементов в этой "
-"директории."
+"Вставка не возможна: у Вас недостаточно прав для создания элементов в этом "
+"каталоге."
 
 #: js/clipboard.js:65
 msgid "Paste %n item"
 msgid_plural "Paste %n items"
-msgstr[0] "Вставить элемент"
-msgstr[1] "Вставить элементы: %n"
+msgstr[0] "Вставить %n элемент"
+msgstr[1] "Вставить %n элемента"
+msgstr[2] "Вставить %n элементов"
 
 #: js/clipboard.js:131
 msgid "An error occurred during the move."
@@ -82,5 +83,5 @@ msgid ""
 "The contents of the clipboard is in conflicts with elements already present "
 "in this directory. Do you want to replace them ?"
 msgstr ""
-"Содержимое буфера обмена конфликтует с элементами находящимися в папке. "
-"Заменить конфликтующие элементы папки ?"
+"Содержимое буфера обмена конфликтует с элементами находящимися в каталоге. "
+"Заменить конфликтующие элементы каталога ?"
