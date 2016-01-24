@@ -1,15 +1,5 @@
-tr.cut td.filename:before {
-	position: absolute;
-	display: block;
-	width: 50px;
-	height: 50px;
-	background-color: white;
+tr.cut div.thumbnail {
 	opacity: 0.6;
-	content: "";
-}
-
-tr:hover td.filename:before, tr.selected td.filename:before {
-	background-color: inherit;
 }
 
 #clipboard_paste {
