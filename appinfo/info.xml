@@ -3,8 +3,11 @@
     <id>files_clipboard</id>
     <name>Files clipboard</name>
     <description>Clipboard operations for the files interface.</description>
-    <version>0.4.2</version>
+    <version>0.5.0</version>
     <licence>AGPL</licence>
     <author>Leizh</author>
-    <require>7</require>
+    <dependencies>
+        <owncloud min-version="8.2" max-version="9.1" />
+        <php min-version="5.4" max-version="7.0" />
+    </dependencies>
 </info>
