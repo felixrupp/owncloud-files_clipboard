@@ -54,7 +54,7 @@ if (location.pathname.indexOf("files") != -1) {
 			name: 'Copy',
 			displayName: t('files_clipboard', 'Copy'),
 			mime: 'all',
-			order: 0,
+			order: -9,
 			permissions: OC.PERMISSION_READ,
 			icon: OC.imagePath('files_clipboard', 'copy.svg'),
 			actionHandler: function(filename) {
