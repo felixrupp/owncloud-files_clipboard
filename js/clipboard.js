@@ -37,6 +37,33 @@ $fileList.on('fileActionsReady', function() {
 	$fileList.on('DOMNodeRemoved', onRowRemoved);
 });
 
+if (location.pathname.indexOf("files") != -1) {
+	if (typeof FileActions !== 'undefined') {
+		FileActions.registerAction({
+			name: 'Cut',
+			displayName: t('files_clipboard', 'Cut'),
+			mime: 'all',
+			order: -10,
+			permissions: OC.PERMISSION_READ,
+			icon: OC.imagePath('files_clipboard', 'cut.svg'),
+			actionHandler: function(filename) {
+				cut(filename); 
+			}
+		});
+		FileActions.registerAction({
+			name: 'Copy',
+			displayName: t('files_clipboard', 'Copy'),
+			mime: 'all',
+			order: 0,
+			permissions: OC.PERMISSION_READ,
+			icon: OC.imagePath('files_clipboard', 'copy.svg'),
+			actionHandler: function(filename) {
+				copy(filename); 
+			}
+		});
+	}
+}
+
 function onRowRemoved(event) {
 	var $target = $(event.target);
 	if (clipboard && clipboard.directory == $dir.val() && $target.is('tr[data-file]')) {
@@ -90,8 +117,12 @@ function clearCut() {
 	$('tr[data-file]', $fileList).removeClass('cut');
 }
 
-function cut () {
-	var files = FileList.getSelectedFiles().map(function(file) { return file.name; });
+function cut (file) {
+	if (typeof file === "string") {
+		var files = [file];
+	} else {
+		var files = FileList.getSelectedFiles().map(function(file) { return file.name; });
+	}
 	clipboard = { operation: 'cut', directory: $dir.val(), files: files };
 	sessionStorage.setItem(appid, JSON.stringify(clipboard));
 	clearCut();
@@ -99,8 +130,12 @@ function cut () {
 	update(true);
 }
 
-function copy () {
-	var files = FileList.getSelectedFiles().map(function(file) { return file.name; });
+function copy (file) {
+	if (typeof file === "string") {
+		var files = [file];
+	} else {
+		var files = FileList.getSelectedFiles().map(function(file) { return file.name; });
+	}
 	clipboard = { operation: 'copy', directory: $dir.val(), files: files };
 	sessionStorage.setItem(appid, JSON.stringify(clipboard));
 	clearCut();
