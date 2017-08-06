@@ -22,3 +22,10 @@ tr.cut div.thumbnail {
 	margin-bottom: 0.4em; 
 	padding: 0.2em;
 }
+
+@media only screen and (max-width: 768px) {
+	#clipboard_cut > span:not(.svg),
+	#clipboard_copy > span:not(.svg) {
+		display: none;
+	}
+}

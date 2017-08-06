@@ -49,8 +49,6 @@ foreach($_POST['files'] as $file) {
 			$messages[] = $l->t("Could not copy '%s'", array($file));
 		}
 	}
-	$error = error_get_last();
-	if ($error) $messages[] = $error->message;
 }
 
 if (empty($messages)) OCP\JSON::success();
