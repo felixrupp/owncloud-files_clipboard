@@ -3,7 +3,7 @@
     <id>files_clipboard</id>
     <name>Files clipboard</name>
     <summary>Clipboard operations for the files application</summary>
-    <description>Minimal clipboard feature for the files application. . Allows to copy and move files between directories.</description>
+    <description>Minimal clipboard feature for the files application. Allows to copy and move files between directories.</description>
     <version>0.6.0</version>
     <licence>AGPL</licence>
     <author>Leizh</author>
