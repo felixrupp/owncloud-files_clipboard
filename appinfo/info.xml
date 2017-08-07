@@ -2,11 +2,17 @@
 <info>
     <id>files_clipboard</id>
     <name>Files clipboard</name>
-    <description>Clipboard operations for the files interface.</description>
+    <summary>Clipboard operations for the files application</summary>
+    <description>Minimal clipboard feature for the files application. . Allows to copy and move files between directories.</description>
     <version>0.6.0</version>
     <licence>AGPL</licence>
     <author>Leizh</author>
     <category>tools</category>
+    <website>https://github.com/leizh/owncloud-files_clipboard</website>
+    <repository>https://github.com/leizh/owncloud-files_clipboard</repository>
+    <bugs>https://github.com/leizh/owncloud-files_clipboard/issues</bugs>
+    <documentation>https://github.com/leizh/owncloud-files_clipboard</documentation>
+    <screenshot>https://raw.githubusercontent.com/leizh/owncloud-files_clipboard/master/appinfo/screenshot.png</screenshot>
     <dependencies>
         <owncloud min-version="9.0" max-version="10.0" />
         <nextcloud min-version="12.0" max-version="12.0" />
