@@ -2,6 +2,8 @@ Description
 -----------
 Minimal clipboard feature for the files application. Allows to copy and move files between directories.
 
+![](https://raw.githubusercontent.com/leizh/owncloud-files_clipboard/master/appinfo/nextcloud-clipboard.gif)
+
 Installation
 ------------
 Extract the [release](https://github.com/leizh/owncloud-files_clipboard/releases/latest) in your `apps` directory and rename it to `files_clipboard`.
