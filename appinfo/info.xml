@@ -4,7 +4,7 @@
     <name>Files clipboard</name>
     <summary>Clipboard operations for the files application</summary>
     <description>Minimal clipboard feature for the files application. Allows to copy and move files between directories.</description>
-    <version>0.6.3</version>
+    <version>0.6.4</version>
     <licence>AGPL</licence>
     <author>Leizh</author>
     <category>tools</category>
@@ -16,7 +16,7 @@
     <screenshot>https://raw.githubusercontent.com/leizh/owncloud-files_clipboard/master/appinfo/nextcloud-clipboard.gif</screenshot>
     <dependencies>
         <owncloud min-version="9.0" max-version="10.0" />
-        <nextcloud min-version="12.0" max-version="12.0" />
-        <php min-version="5.4" max-version="7.0" />
+        <nextcloud min-version="12" max-version="12" />
+        <php min-version="5.4" max-version="7.1" />
     </dependencies>
 </info>
