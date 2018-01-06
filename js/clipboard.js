@@ -112,7 +112,7 @@ function clearCut() {
 }
 
 function cut (file) {
-	let files = file ? [ file ] :  FileList.getSelectedFiles().map(function(file) { return file.name; });
+	var files = file ? [ file ] :  FileList.getSelectedFiles().map(function(file) { return file.name; });
 	clipboard = { operation: 'cut', directory: $dir.val(), files: files };
 	sessionStorage.setItem(appid, JSON.stringify(clipboard));
 	clearCut();
@@ -121,7 +121,7 @@ function cut (file) {
 }
 
 function copy (file) {
-	let files = file ? [ file ] :  FileList.getSelectedFiles().map(function(file) { return file.name; });
+	var files = file ? [ file ] :  FileList.getSelectedFiles().map(function(file) { return file.name; });
 	clipboard = { operation: 'copy', directory: $dir.val(), files: files };
 	sessionStorage.setItem(appid, JSON.stringify(clipboard));
 	clearCut();
