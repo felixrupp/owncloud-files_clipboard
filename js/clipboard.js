@@ -73,12 +73,12 @@ function onRowRemoved(event) {
 function update(blink) {
 	var permissions = parseInt($('#permissions').val());
 
-	$cut.toggle((permissions & OC.PERMISSION_READ && permissions & OC.PERMISSION_DELETE) != 0);
+	$cut.toggle((permissions & OC.PERMISSION_READ && permissions & OC.PERMISSION_UPDATE) != 0);
 	$copy.toggle((permissions & OC.PERMISSION_READ) != 0);
 
 	if (clipboard) {
 		var sameDirectory = clipboard.directory == $dir.val(),
-			noPermissions = !(permissions & OC.PERMISSION_CREATE),
+			noPermissions = !(permissions & OC.PERMISSION_WRITE),
 			disabled = noPermissions || sameDirectory,
 			title;
 		if (sameDirectory) title = t(appid, 'Unable to paste: the files come from this directory.')
