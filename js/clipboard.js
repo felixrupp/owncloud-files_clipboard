@@ -154,11 +154,8 @@ function paste() {
 					if (data.messages.length === 1) {
 						message = data.messages[0];
 					} else {
-						if (clipboard.operation == 'cut') {
-							message = '<b>An error occurred during the move.</b>';
-						} else {
-							message = '<b>An error occurred during the copy.</b>';
-						}
+						if (clipboard.operation == 'cut') message = '<b>' +  t(appid, 'An error occurred during the move.') + '</b>';
+						else message = '<b>' +  t(appid, 'An error occurred during the copy.') + '</b>';
 						message += '<p class="files_clipboard_error">';
 						for (var i = data.messages.length - 1; i >= 0; --i) message += data.messages[i] + '<br>';
 						message += '</p>';
