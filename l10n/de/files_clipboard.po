@@ -69,7 +69,7 @@ msgid "An error occurred during the move."
 msgstr "Beim verschieben ist ein Fehler aufgetreten."
 
 #: js/clipboard.js:132
-msgid "Une erreur s'est produite during the copy."
+msgid "An error occurred during the copy."
 msgstr "Beim kopieren ist ein Fehler aufgetreten."
 
 #: js/clipboard.js:153
