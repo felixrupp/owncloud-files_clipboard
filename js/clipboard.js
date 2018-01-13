@@ -78,7 +78,7 @@ function update(blink) {
 
 	if (clipboard) {
 		var sameDirectory = clipboard.directory == $dir.val(),
-			noPermissions = !(permissions & OC.PERMISSION_WRITE),
+			noPermissions = !(permissions & OC.PERMISSION_CREATE),
 			disabled = noPermissions || sameDirectory,
 			title;
 		if (sameDirectory) title = t(appid, 'Unable to paste: the files come from this directory.')
@@ -155,9 +155,9 @@ function paste() {
 						message = data.messages[0];
 					} else {
 						if (clipboard.operation == 'cut') {
-							message = '<b>' + n(appid, "%n error occurred during the move:", "%n errors occurred during the move:", data.messages.length) + '</b>';
+							message = '<b>An error occurred during the move.</b>';
 						} else {
-							message = '<b>' + n(appid, "%n error occurred during the copy:", "%n errors occurred during the copy:", data.messages.length) + '</b>';
+							message = '<b>An error occurred during the copy.</b>';
 						}
 						message += '<p class="files_clipboard_error">';
 						for (var i = data.messages.length - 1; i >= 0; --i) message += data.messages[i] + '<br>';
