@@ -1,0 +1,92 @@
+#
+# Translators:
+# Casper <casper@vrije-mens.org>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: ownCloud files_clipboard\n"
+"Report-Msgid-Bugs-To: translations@owncloud.org\n"
+"POT-Creation-Date: 2018-01-11 18:54+0100\n"
+"PO-Revision-Date: 2018-01-11 06:18+0000\n"
+"Last-Translator: Casper <casper@vrije-mens.org>\n"
+"Language-Team: Dutch\n"
+"Language: nl_NL\n"
+"Plural-Forms: nplurals=2; plural=n!=1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Loco-Source-Locale: nl_NL\n"
+"X-Loco-Parser: loco_parse_po\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: ajax/clipboard.php:48
+#, php-format
+msgid "Could not remove '%s'"
+msgstr "Kon '%s' niet verwijderen."
+
+#: ajax/clipboard.php:55
+#, php-format
+msgid "Could not move '%s'"
+msgstr "Kon '%s' niet verplaatsen."
+
+#: ajax/clipboard.php:59
+#, php-format
+msgid "Could not copy '%s'"
+msgstr "Kon '%s' niet kopiëren."
+
+#: js/clipboard.js:11
+msgid "Cut"
+msgstr "Knippen"
+
+#: js/clipboard.js:19
+msgid "Copy"
+msgstr "Kopiëren"
+
+#: js/clipboard.js:26 js/clipboard.js:165
+msgid "Paste"
+msgstr "Plakken"
+
+#: js/clipboard.js:63
+msgid "Unable to paste: the files come from this directory."
+msgstr "Plakken niet mogelijk: de bestanden stammen uit deze folder."
+
+#: js/clipboard.js:64
+msgid ""
+"Unable to paste: you do not have the permissions to create files in this "
+"directory."
+msgstr ""
+"Plakken niet mogelijk: U heeft geen toestemming om bestanden in deze "
+"folder aan te maken."
+
+#: js/clipboard.js:65
+#, c-format
+msgid "Paste %n item"
+msgid_plural "Paste %n items"
+msgstr[0] "Een item plakken"
+msgstr[1] "%n items einfügen"
+
+#: js/clipboard.js:131
+msgid "An error occurred during the move."
+msgstr "Bij het verplaatsen is een fout opgetreden."
+
+#: js/clipboard.js:132
+msgid "An error occurred during the copy."
+msgstr "Bij het kopiëren is een fout opgetreden."
+
+#: js/clipboard.js:153
+msgid "Processing. Leaving the page now will interrupt the move."
+msgstr ""
+"Verwerking: Als u de pagina nu verlaat, dan wordt het verplaatsen "
+"afgebroken."
+
+#: js/clipboard.js:154
+msgid "Processing. Leaving the page now will interrupt the copy."
+msgstr ""
+"Verwerking: Als u de pagina nu verlaat, dan wordt het kopiëren afgebroken."
+
+#: js/clipboard.js:164
+msgid ""
+"The contents of the clipboard is in conflicts with elements already present "
+"in this directory. Do you want to replace them ?"
+msgstr ""
+"De inhoud van het prikbord conflicteert met items die reeds in deze folder "
+"aanwezig zijn. Wilt u ze vervangen?"
