@@ -11,3 +11,13 @@ Extract the [release](https://github.com/leizh/owncloud-files_clipboard/releases
 License
 -------
 [GNU Affero General Public License](http://www.gnu.org/licenses/agpl-3.0.html)
+
+
+Authors
+-------
+
+Current Version, since 1.0.0:
+* Felix Rupp - [github.com/felixrupp](https://github.com/felixrupp)
+
+Older Versions:
+* leizh - [github.com/leizh](https://github.com/leizh/)
