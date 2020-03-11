@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.0.2
+
+* Improves Readme (thanks to [@mmattel](https://github.com/mmattel))
+
 ## Version 1.0.1
 
 * Fixes ownCloud max-version and sets it to 10 (for any feature- and minor-updates)
