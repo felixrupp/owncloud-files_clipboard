@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.0.3
+
+* Fix dutch translation
+
 ## Version 1.0.2
 
 * Improves Readme (thanks to [@mmattel](https://github.com/mmattel))

@@ -5,7 +5,7 @@
 "Cut" => "Knippen",
 "Copy" => "Kopiëren",
 "Paste" => "Plakken",
-"Unable to paste: the files come from this directory." => "Plakken niet megelijk: de bestanden komen uit deze folder.",
+"Unable to paste: the files come from this directory." => "Plakken niet mogelijk: de bestanden komen uit deze folder.",
 "Unable to paste: you do not have the permissions to create files in this directory." => "Plakken niet mogelijk: u bent niet gemachtigd om bestanden in deze folder aan te maken.",
 "_Paste %n item_::_Paste %n items_" => array("Een element plakken","%n elementen plakken"),
 "An error occurred during the move." => "Bij het verplaatsen is een fout opgetreden.",
