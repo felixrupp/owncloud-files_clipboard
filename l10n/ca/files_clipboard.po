@@ -1,0 +1,85 @@
+# Consorci de Serveis Universitaris de Catalunya (CSUC), 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ownCloud Core 6.0.0\n"
+"Report-Msgid-Bugs-To: translations@owncloud.org\n"
+"POT-Creation-Date: 2014-03-13 18:54+0100\n"
+"PO-Revision-Date: 2020-10-28 15:54+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.4.1\n"
+"Last-Translator: \n"
+"Language: ca\n"
+
+#: ajax/clipboard.php:48
+#, php-format
+msgid "Could not remove '%s'"
+msgstr "No s' ha pogut eliminar '%s'"
+
+#: ajax/clipboard.php:55
+#, php-format
+msgid "Could not move '%s'"
+msgstr "No s' ha pogut moure '%s'"
+
+#: ajax/clipboard.php:59
+#, php-format
+msgid "Could not copy '%s'"
+msgstr "No s' ha pogut copiar '%s'"
+
+#: js/clipboard.js:11
+msgid "Cut"
+msgstr "Retalla"
+
+#: js/clipboard.js:19
+msgid "Copy"
+msgstr "Copia"
+
+#: js/clipboard.js:26 js/clipboard.js:165
+msgid "Paste"
+msgstr "Enganxa"
+
+#: js/clipboard.js:63
+msgid "Unable to paste: the files come from this directory."
+msgstr "No es pot enganxar: els fitxers provenen d'aquest directori."
+
+#: js/clipboard.js:64
+msgid ""
+"Unable to paste: you do not have the permissions to create files in this "
+"directory."
+msgstr ""
+"No es pot enganxar: no teniu els permisos per crear fitxers en aquest "
+"directori."
+
+#: js/clipboard.js:65
+msgid "Paste %n item"
+msgid_plural "Paste %n items"
+msgstr[0] "Enganxa %n element"
+msgstr[1] "Enganxa %n elements"
+
+#: js/clipboard.js:131
+msgid "An error occurred during the move."
+msgstr "S'ha produït un error durant el moviment."
+
+#: js/clipboard.js:132
+msgid "An error occurred during the copy."
+msgstr "S'ha produït un error durant la còpia."
+
+#: js/clipboard.js:153
+msgid "Processing. Leaving the page now will interrupt the move."
+msgstr "Processant. Abandonar la pàgina ara interromprà l'acció de moure."
+
+#: js/clipboard.js:154
+msgid "Processing. Leaving the page now will interrupt the copy."
+msgstr "Processant. Abandonar la pàgina ara interromprà la còpia."
+
+#: js/clipboard.js:164
+msgid ""
+"The contents of the clipboard is in conflicts with elements already present "
+"in this directory. Do you want to replace them ?"
+msgstr ""
+"Els continguts del porta-retalls estan en conflicte amb elements ja "
+"presents en aquesta carpeta. Vol reemplaçar-los?"
