@@ -1,3 +1,7 @@
+> [!WARNING]  
+> This app and this repository has been abandoned. Feel free to use the sourcecode to your liking.
+
+
 Description
 -----------
 Minimal clipboard feature for the files application. Allows to copy and move files between directories.
